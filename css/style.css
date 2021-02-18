@@ -1,0 +1,64 @@
+:root {
+
+  /* Font Families */
+  --generalFont: 'source Sans Pro', sans-serif;
+  --headerFont: 'Roboto Slab', serif;;
+
+  /* Colours */
+  --lightGrey: #e3e0e3;
+  --darkPurple: #301930;
+  --mediumPurple: #562f56;
+  --orange: #ff980c;
+} 
+
+html {
+  box-sizing:border-box;
+}
+
+*, *::before, *::after {
+  box-sizing:inherit;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var( --headerFont );
+}
+
+body {
+  font-family: var( --headerFont );
+}
+
+.nav {
+  background-color: var( --darkPurple );
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:link {
+  color: var( --lightGrey );
+}
+
+.nav a:visited {
+  color: var( --lightGrey );
+  
+}
+
+.nav a:hover {
+  color: var( --orange )  
+}
+
+.nav a:link {
+  color: var( --orange );
+}
