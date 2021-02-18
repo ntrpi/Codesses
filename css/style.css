@@ -28,6 +28,20 @@ html {
 
 h1, h2, h3, h4 {
   font-family: var( --headerFont );
+  color: var( --lightGrey );
+}
+
+.banner {
+  display: flex;
+  background-color: var( --darkPurple );
+}
+
+h1 {
+  padding: 1em;
+}
+
+.logo {
+  padding: 2em;
 }
 
 body {
