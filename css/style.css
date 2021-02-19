@@ -59,7 +59,7 @@ h1 {
 }
 
 nav {
-  background-color: var( --mediumPurple );
+  background-color: var( --darkPurple );
   padding: 1em 0;
 }
 
@@ -113,17 +113,17 @@ header nav ul {
   flex-direction: row;
 }
 
-.mainDiv nav {
+.accountNav {
   background-color: var( --darkPurple );
 }
 
-.mainDiv nav ul {
+.accountNav ul {
   flex-direction: column;
   margin: 0 1.5em;
   padding: 0;
 }
 
-.mainDiv nav li {
+.accountNav li {
   flex-direction: column;
   margin: 0 0.5em;
   padding: 0.4em 0;
@@ -177,7 +177,6 @@ footer {
     margin-top: 3.1em;
     height: 50px;
   }
-
 }
 
 /***** Tablet Portrait View ******/
@@ -192,9 +191,10 @@ footer {
     height: 35px;
   }
 
-}.mainDiv nav ul {
-  margin: 0 0.7em;
-  font-size: 0.8em;
+  .accountNav ul {
+    margin: 0 0.7em;
+    font-size: 0.8em;
+  }
 }
 
 /***** Phone Landscape View ******/
@@ -214,7 +214,7 @@ footer {
   }
 
 
-  .mainDiv nav ul {
+  .accountNav ul {
     margin: 0 0.7em;
     font-size: 0.8em;
   }
@@ -241,13 +241,13 @@ footer {
     flex-direction: column;
   }
 
-  .mainDiv nav ul {
+  .accountNav ul {
     flex-direction: row;
     justify-content: space-around;
     margin: 0;
   }
 
-  .mainDiv nav li {
+  .accountNav li {
     padding: 0;
   }
 }
@@ -268,7 +268,7 @@ footer {
     font-size: 1em;
   }
 
-  .mainDiv nav ul {
+  .accountNav ul {
     flex-wrap: wrap;
     margin: 0;
   }
