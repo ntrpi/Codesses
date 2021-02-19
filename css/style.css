@@ -31,48 +31,246 @@ h1, h2, h3, h4 {
   color: var( --lightGrey );
 }
 
+body {
+  max-width: 1200px;
+  max-height: 800px;
+  margin: auto;
+  font-family: var( --generalFont ); 
+}
+
 .banner {
-  display: flex;
   background-color: var( --darkPurple );
+  display: flex;
+  justify-content: space-around;
 }
 
 h1 {
-  padding: 1em;
+  font-size: 5.5em;
+  padding-right: .5em;
 }
 
 .logo {
-  padding: 2em;
+  padding: 1em 0 1em 1em;
 }
 
-body {
-  font-family: var( --headerFont );
+.logo img{
+  margin-top: 3.3em;
+  height: 100px;
 }
 
-.nav {
-  background-color: var( --darkPurple );
+nav {
+  background-color: var( --mediumPurple );
+  padding: 1em 0;
 }
 
-.nav ul {
+nav ul {
   list-style-type: none;
+  display: flex;
 }
 
-.nav a {
+nav li {
+  font-family: var(--generalFont);
+  font-size: 1.5em;
+}
+
+nav a {
   text-decoration: none;
 }
 
-.nav a:link {
+nav a:link {
   color: var( --lightGrey );
 }
 
-.nav a:visited {
+nav a:visited {
   color: var( --lightGrey );
-  
 }
 
-.nav a:hover {
+nav a:hover {
   color: var( --orange )  
 }
 
-.nav a:link {
+nav a:link {
   color: var( --orange );
+}
+
+header nav ul {
+  align-items: stretch;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.borderDiv {
+  background-color: var( --orange );
+  height: 5px;
+}
+
+
+/*****Main Content*****/
+.mainDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.mainDiv nav {
+  background-color: var( --darkPurple );
+}
+
+.mainDiv nav ul {
+  flex-direction: column;
+  margin: 0 1.5em;
+  padding: 0;
+}
+
+.mainDiv nav li {
+  flex-direction: column;
+  margin: 0 0.5em;
+  padding: 0.4em 0;
+}
+
+.content {
+  color: var(--lightGrey);
+  background-color: var(--mediumPurple);
+  font-weight: lighter;
+  text-align: center;
+  padding: 0 1em;
+}
+
+/*****Orange boxes*****/
+.contentBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cBox{
+  border-radius: 15px;
+  width: 17em;
+  height:7em;
+  opacity: 0.6;
+  background-color: var(--orange);
+  margin: 1em;
+}
+
+/*****Footer*****/
+footer {
+  background-color: var(--darkPurple);
+}
+
+.footerNav ul {
+  margin: 0;
+  padding-inline-start: 0;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;
+}
+
+/***** Tablet Landscape View ******/
+@media screen and (max-width: 957px) {
+
+  .siteName {
+    font-size: 4em;
+  }
+
+  .logo img{
+    margin-top: 3.1em;
+    height: 50px;
+  }
+
+}
+
+/***** Tablet Portrait View ******/
+@media screen and (max-width: 700px) {
+
+  .siteName {
+    font-size: 3em;
+  }
+
+  .logo img{
+    margin-top: 2.1em;
+    height: 35px;
+  }
+
+}.mainDiv nav ul {
+  margin: 0 0.7em;
+  font-size: 0.8em;
+}
+
+/***** Phone Landscape View ******/
+@media screen and (max-width: 500px) {
+
+  .siteName {
+    font-size: 2em;
+  }
+
+  .logo img{
+    margin-top: 1em;
+    height: 25px;
+  }
+
+  nav li {
+    font-size: 1.2em;
+  }
+
+
+  .mainDiv nav ul {
+    margin: 0 0.7em;
+    font-size: 0.8em;
+  }
+}
+
+/***** Phone Portrait View ******/
+@media screen and (max-width: 400px) {
+
+  .siteName {
+    font-size: 2em;
+  }
+
+  .logo img{
+    margin-top: 1em;
+    height: 25px;
+  }
+
+  nav li {
+    font-size: 1.2em;
+  }
+
+
+  .mainDiv {
+    flex-direction: column;
+  }
+
+  .mainDiv nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .mainDiv nav li {
+    padding: 0;
+  }
+}
+
+/***** Small Phone Portrait View ******/
+@media screen and (max-width: 345px) {
+
+  .siteName {
+    font-size: 1.5em;
+  }
+
+  .logo img{
+    margin-top: 0.5em;
+    height: 20px;
+  }
+
+  nav li {
+    font-size: 1em;
+  }
+
+  .mainDiv nav ul {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
 }
